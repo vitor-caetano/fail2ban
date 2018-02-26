@@ -1,0 +1,10 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Install fail2ban.
+      become: true
+      apt: name=fail2ban state=present
+
+    - name: Ensure fail2ban is started and enabled on boot.
+      service: name=fail2ban state=started enabled=yes

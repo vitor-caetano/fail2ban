@@ -1,0 +1,6 @@
+[test]
+ansible_target
+
+[all:vars]
+ansible_connection=ssh
+ansible_ssh_user=ubuntu
