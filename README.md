@@ -12,6 +12,8 @@ docker run -d -p 2222:22 \
   -v ~/.ssh/id_rsa.pub:/home/ubuntu/.ssh/authorized_keys \
   localhost:5000/ansible_target:latest
 
+cd provisioning
+
 docker run --rm -it \
   --network=isolated_nw \
   -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
